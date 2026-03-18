@@ -33,6 +33,11 @@ bool isMouseDown;
 int numberOfStars;
 std::vector<Star> stars;
 
+// Buttons
+const int refreshButtonWidth = 80;
+const int refreshButtonHeight = 80;
+const int distanceFromEdge = 10;
+
 int main() {
   SDL_Init(SDL_INIT_VIDEO);
   SDL_Window* window = SDL_CreateWindow("Spawn Star v0.1.2", 384, 216, SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED);
@@ -91,7 +96,7 @@ int main() {
     SDL_GetWindowSizeInPixels(window, &windowWidth, &windowHeight);
 
     // Buttons
-    Button refreshButton("Refresh Button", windowWidth - 90, 10, 80, 80, "img/Refresh_icon.bmp");
+    Button refreshButton("Refresh Button", windowWidth - (refreshButtonWidth + distanceFromEdge), distanceFromEdge, refreshButtonWidth, refreshButtonHeight, "img/Refresh_icon.bmp");
 
     // Check if the user quits
     while(SDL_PollEvent(&event)) {
