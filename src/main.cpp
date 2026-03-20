@@ -34,9 +34,17 @@ int numberOfStars;
 std::vector<Star> stars;
 
 // Buttons
-const int refreshButtonWidth = 80;
-const int refreshButtonHeight = 80;
-const int distanceFromEdge = 10;
+const int refreshWidth = 80;
+const int refreshHeight = 80;
+const int refreshDistanceFromEdge = 10;
+
+const int upWidth = 80;
+const int upHeight = 40;
+const int upDistanceFromEdge = 10;
+
+const int downWidth = 80;
+const int downHeight = 40;
+const int downDistanceFromEdge = 10;
 
 int main() {
   SDL_Init(SDL_INIT_VIDEO);
@@ -91,12 +99,14 @@ int main() {
   SDL_Log("Window Width: %d", windowWidth);
   SDL_Log("Number of initial stars (Before removal of some): %d", numberOfStars);
 
+  // Buttons
+  Button refreshButton("Refresh Button", windowWidth - (refreshWidth + refreshDistanceFromEdge), refreshDistanceFromEdge, refreshWidth, refreshHeight, "img/Refresh_icon.bmp");
+  Button upButton("Up Button", windowWidth - (upWidth + upDistanceFromEdge), refreshDistanceFromEdge + refreshHeight + upDistanceFromEdge, upWidth, upHeight, "img/Up_icon.bmp");
+  Button downButton("Down Button", windowWidth - (downWidth + downDistanceFromEdge), (upHeight + refreshHeight + downHeight), downWidth, downHeight, "img/Down_icon.bmp");
+
   while (running) {
     // Keep updating fo the buttons to be able to move. 
     SDL_GetWindowSizeInPixels(window, &windowWidth, &windowHeight);
-
-    // Buttons
-    Button refreshButton("Refresh Button", windowWidth - (refreshButtonWidth + distanceFromEdge), distanceFromEdge, refreshButtonWidth, refreshButtonHeight, "img/Refresh_icon.bmp");
 
     // Check if the user quits
     while(SDL_PollEvent(&event)) {
@@ -120,9 +130,17 @@ int main() {
       }
     }
 
-    // Refresh button detection
+    // button detection
     if (refreshButton.isTouching() && isMouseDown) {
       SDL_Log("Refresh Button Pressed");
+    }
+
+    if (upButton.isTouching() && isMouseDown) {
+      SDL_Log("up Button Pressed");
+    }
+
+    if (downButton.isTouching() && isMouseDown) {
+      SDL_Log("Down Button Pressed");
     }
 
     // Clear
@@ -142,6 +160,8 @@ int main() {
     }
 
     refreshButton.renderButton(renderer);
+    upButton.renderButton(renderer);
+    downButton.renderButton(renderer);
 
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); 
 
