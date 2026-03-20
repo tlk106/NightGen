@@ -42,10 +42,14 @@
 - [X] Change the amount of stars that are generated based on the dimensions
 
 ## v0.2.0 (UI Update)
-- [ ] Refresh button
-- [ ] Star Slider
-    - [ ] Make a settings.txt
-    - [ ] Save settings inside using ```<fstream>```
+- [ ] Refreshing
+    - [X] Refresh button
+    - [ ] Make it functional
+    - [ ] Polish
+- [ ] Star Amount Control
+    - [X] Up and down Buttons
+    - [ ] Make it functional
+    - [ ] Polish
 - [ ] Show star properties on hover
     - [ ] Make background
     - [ ] Get the text
