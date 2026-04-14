@@ -4,10 +4,10 @@ A C++ SDL3 app that procedurally generates stars on your screen.
 
 <img width="1920" height="1023" alt="image" src="https://github.com/user-attachments/assets/36627618-ff3b-44a5-82b8-a37f8569459e" />
 
-# View the To - Do list.
+# View the To - Do list
 [ToDo.md][e]
 
-# How to build.
+# How to build
 
 1. Get a C++ compiler
 
@@ -27,7 +27,7 @@ A C++ SDL3 app that procedurally generates stars on your screen.
 
 9. Make sure you have SDL3.dll in the same directory as SpawnStar.exe
 
-- SpawnStar.exe can be in any directory now, as long as SDL3.dll is in it.
+- SpawnStar.exe can be in any directory now, as long as SDL3.dll is in it
 
 [e]: https://github.com/tlk106/SpawnStar/blob/main/ToDo.md
 [eagain]: https://cmake.org/download/
