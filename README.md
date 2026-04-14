@@ -1,4 +1,4 @@
-# **READ THIS** ➡️ This project is paused because I realized I am not as good as I thought. I jumped in with only 2 months of c++ experience. I will come back in 2 or 3 months (June - July) so I can work on my skills and become better.
+This project is paused because I realized I am not as good as I thought. I jumped in with only 2 months of c++ experience. I will come back in 2 or 3 months (June - July) so I can work on my skills and become better.
 # SpawnStar v0.1.2
 A C++ SDL3 app that procedurally generates stars on your screen.
 
